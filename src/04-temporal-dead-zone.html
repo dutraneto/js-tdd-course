@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+<script>
+  const ireland = ['Dublin', 'Galway', 'Cork'];
+
+  const love = ireland.map(function(name) {
+    return 'I love ${name}!';
+  });
+
+  const loveArrow = ireland.map((name) => {
+    return 'I love ' + name;
+  });
+
+  const loveArrowSingle = ireland.map(name => {
+    return 'I love ' + name + '!';
+  });
+
+  const loveArrowOneLine = ireland.map(name => 'I love ' + name + '!');
+
+  const loveChain = ireland
+                      .filter(name => name === 'Dublin')
+                      .map(name => 'I love ' + name);
+
+  console.log(ireland);
+  console.log(love);
+  console.log(loveArrowSingle);
+  console.log(loveArrow);
+  console.log(loveArrowOneLine);
+  console.log(loveArrow);
+  console.log(loveChain);
+
+</script>
+</html>
