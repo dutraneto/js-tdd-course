@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+<script>
+  const ireland = {
+    live: 'Dublin',
+    love: 'Galway'
+  };
+  //bad
+  const text = 'Eu moro em ' + ireland.live + ' e sou apaixonado por ' + ireland.love+'!';
+  // good
+  const newText = `Eu moro em ${ireland.live} e sou apixonado por ${ireland.love}!`;
+  console.log(newText);
+
+  // bad
+  const fruits = 'banana'
+                  + `\n`
+                  + 'orange'
+                  + `\n`
+                  + 'apple';
+  console.log(fruits);
+
+  // good
+  const newFruits =
+  `banana
+  orange
+  apple`;
+  console.log(newFruits);
+</script>
+</html>

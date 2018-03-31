@@ -13,11 +13,11 @@
   const ireland = ['Dublin', 'Galway', 'Cork'];
 
   const love = ireland.map(function(name) {
-    return 'I love ${name}!';
+    return `I love ${name}!`;
   });
 
   const loveArrow = ireland.map((name) => {
-    return 'I love ' + name;
+    return `I love ${name}`; // template literal
   });
 
   const loveArrowSingle = ireland.map(name => {

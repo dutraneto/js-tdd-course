@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>15 - spread operator - intro</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    let front = ['react', 'vue', 'angular'];
+    let back = ['python', 'ruby', 'nodejs'];
+
+    // before
+    // let fullStack = [];
+    // fullStack = fullStack.concat(front);
+    // fullStack.push('RxJS');
+    // fullStack = fullStack.concat(back);
+
+    // after
+    let stack = [...front, 'RxJS', ...back]
+
+    console.log(stack);
+  </script>
+</html>

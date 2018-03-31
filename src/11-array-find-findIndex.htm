@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>03-array-find-findIndex.htm</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+<script>
+
+  const data = [
+    {
+      name: 'José',
+      age: 36,
+      city: 'Dublin'
+    },
+    {
+      name: 'Jonas',
+      age: 22,
+      city: 'Cologne'
+    }
+  ];
+
+  const sampleArray = [4, -5, 0, -1];
+  // pega o primeiro numero menor que zero
+  const underZero = sampleArray.find(x => x < 0);
+  console.log(underZero);
+  // pega o index do primeiro negativo
+  const underZeroIndex = sampleArray.findIndex(x => x < 0);
+  console.log(underZeroIndex);
+
+  const jose = data.find(person => person.name === 'José');
+  const joseIndex = data.findIndex(person => person.name === 'José');
+  console.log(jose);
+  console.log(joseIndex);
+</script>
+</html>

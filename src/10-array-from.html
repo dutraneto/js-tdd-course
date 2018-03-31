@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>10 - Array.from</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+  <ul id="list">
+    <li>Dudu</li>
+    <li>Karinny</li>
+    <li>Karol</li>
+  </ul>
+
+</body>
+<script>
+  const text = 'José Dutra';
+  console.log(Array.from(text)); // faz uma lista de strings
+
+  const list = document.querySelectorAll('#list li');
+  const listArray = Array.from(list);
+  console.log(listArray); // não roda
+
+  const names = listArray.map((name) => name.textContent);
+  console.log(names); // não roda no chrome
+
+  // Array.of um array de várias coisas
+  const arrayDeCoisas = Array.of(1, 4, 'José Dutra', {name: 'Jonas'}, {'surname': 'Neto'});
+  console.log(arrayDeCoisas);
+</script>
+</html>

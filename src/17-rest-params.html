@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>17 - Rest params</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+  // indicado para um array o qual eu não conheço a qtd de params
+  function multiply(mult, ...args){
+    return args.map(arg => arg * mult);
+  }
+
+    console.log(multiply(5, 2, 8, 10, 12)); 
+  </script>
+</html>

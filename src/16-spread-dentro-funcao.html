@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>16 - Spread dentro da função</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    // declaring a makeSandwich()
+    function makeSandwich(bread, cheese, sauce){
+      console.log(`Your sandwich with the igredients ${bread} bread, ${cheese} cheese and ${sauce} sauce is done!`);
+      document.write(`<h3>Your sandwich with the igredients ${bread} bread, ${cheese} cheese and ${sauce} sauce is done!</h3>`);
+    }
+
+    const igredients = ['white', 'cheddar', 'barbecue'];
+
+    makeSandwich(...igredients);
+  </script>
+</html>

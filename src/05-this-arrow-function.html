@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>05 - This at arrow function</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <button id="btn">Click Me!</button>
+  <br>
+  <button id="abtn">Click Me!</button>
+</body>
+<script>
+  // two diferent events using arrow function
+  // the first one using anonimous function
+  const btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    console.log(this);
+  });
+  // the second using arrow function
+  const anotherBtn = document.getElementById('abtn');
+  abtn.addEventListener('click', () => {
+    console.log(this);
+  });
+</script>
+</html>

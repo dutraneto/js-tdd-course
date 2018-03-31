@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>18 - Promises</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    // cria-se um objeto Promise, passando dois params defualt
+    // params: resolve, reject
+    var defer = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (false) {
+          resolve('Hello, it works!');
+        } else {
+            reject('Error...!');
+        }
+      }, 2000);
+    });
+
+    defer
+      .then((data) => {
+        console.log(data);
+        return 'foo';
+      })
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+  </script>
+</html>

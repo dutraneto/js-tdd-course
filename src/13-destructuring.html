@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>13 - destructuring Array</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+    // uma forma nova de escrever um Array com o destructuring
+    // antes
+    var data = {
+      name: 'José',
+      surname: 'Medeiros',
+      age: 35,
+      blog: "https://dutraneto.github.io",
+      social: {
+        twitter: '@Dutranetom',
+        facebook: '/dudutraneto',
+      }
+    };
+
+    // const name = data.name;
+    // const surname = data.surname;
+    // const age = data.age;
+    // const blog = data.blog;
+    // const twitter = data.social.twitter;
+    // console.log(name, surname, age, blog, twitter);
+
+    // depois com o destructuring
+    const { name, surname, age, blog } = data;
+    console.log(name, surname, age, blog);
+
+    // destructuring social
+    const { facebook, twitter } = data.social;
+    console.log(facebook, twitter);
+
+    // alias
+    const { facebook: fb, twitter: tt } = data.social;
+    console.log(facebook, twitter);
+
+  </script>
+</html>
