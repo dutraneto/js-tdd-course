@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+  /* Essa característica combinada à adição dinâmica de propriedades em objetos JavaScript permite evitar colisões de nomes entre scripts e módulos dentro de um sistema. */
+    let foo = Symbol('name'); // it looks like the same properties
+    let bar = Symbol('name'); // but not
+
+    // console.log(foo === bar);
+    // # false
+
+    let obj = {
+      [Symbol('name')]: 'José',
+      [Symbol('age')]: 36,
+      city: 'Dublin'
+    };
+
+    const symbols = Object.getOwnPropertySymbols(obj);
+    const data = symbols.map(sym => obj[sym]);
+  </script>
+</html>

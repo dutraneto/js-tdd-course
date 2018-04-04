@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>29 - Sets Intro</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+
+    let mySet = new Set(['wiliam', 'jonas', 'godoy']);
+
+    mySet.add('marcio');
+    mySet.add('mércia');
+    mySet.add('marcio'); // não duplica os valores do Obj
+    mySet.add('wiliam');
+
+    console.log(mySet);
+
+    mySet.delete('wiliam'); // retira
+
+    console.log(mySet[1]); // undefined
+
+    let it = mySet.values();
+    console.log(it);
+    console.log(it.next()); // iterator
+    console.log(it.next());
+    console.log(it.next());
+
+    for (name of it) {
+      console.log(name);
+    }
+  </script>
+</html>

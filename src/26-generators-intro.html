@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>26 - Generators Intro</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+    // It uses an function* and yield property for Generators
+    function* genNames() {
+      console.log('Chamando o primeiro nome');
+      yield 'Dutra';
+      console.log('Chamando o segundo nome');
+      yield 'Fabiana';
+      console.log('Chamando o terceiro nome');
+      yield 'Elisabeth';
+    }
+    const names = genNames(); // We have to call through a variable
+
+    console.log(names.next()); // we can also call a next() function
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+  </script>
+</html>
