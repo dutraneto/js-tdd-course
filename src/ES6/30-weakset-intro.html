@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>30 - Weakset intro</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+    let obj1 = {
+      name: 'wiliam',
+      age: 26
+    };
+
+    let obj2 = {
+      name: 'Dutra',
+      age: 36
+    };
+
+    // weakset nao aceita tipos primitivos. Apenas objetos
+    let ws = new WeakSet([obj1, obj2]);
+    // WeakSet {{…}, {…}}
+    // ws.has(obj1)
+    // ws.add({sabor: 'limão', fruta: 12})
+    // {sabor: "limão", fruta: 12}
+
+  </script>
+</html>
