@@ -10,3 +10,8 @@ npm test -- --bail
 ```bash
 npm install --save-dev babel-preset-env babel-register
 ```
+
+*para instalar o code coverage*
+```bash
+npm nyc
+```
