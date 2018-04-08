@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Async/Await Multiple Promises</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+    // async function and await atribute
+    // async function  getUsers(){
+    //   const wiliam = fetch('https://api.github.com/users/willianjusten').then(response => response.json());
+    //   const dutraneto = fetch('https://api.github.com/users/dutraneto').then(response => response.json());
+    //
+    //   const promises = await Promise.all([wiliam, dutraneto]);
+    //   console.log(promises);
+    // }
+
+    async function getUsers(users) {
+      const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(response => response.json()));
+
+      const people = await Promise.all(promises);
+      // console.log(people.map(p => p.name));
+      console.log(people);
+    }
+
+    getUsers(['dutraneto', 'willianjusten']);
+  </script>
+</html>

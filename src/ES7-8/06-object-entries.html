@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Object.entries</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const animals = {
+        camel: 3,
+        llama: 2,
+        alpaca: 5,
+      };
+
+      const animalsMap = new Map(Object.entries(animals));
+
+      // old way
+      console.log(Object.keys(animals));
+
+      // new way
+      console.log(animalsMap.size); // 3
+      console.log(animalsMap.has('llama')); // true
+      console.log(animalsMap.has('lion')); // false
+      console.log(animalsMap.get('alpaca')); // value 5
+
+
+    </script>
+  </body>
+</html>
